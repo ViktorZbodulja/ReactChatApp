@@ -1,0 +1,498 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+.App {
+    background: url("https://wallpaper.dog/large/377198.jpg") no-repeat center center/cover ;
+    height: 100vh;
+}
+.login-page {
+    background: url("https://wallpaper.dog/large/377198.jpg") no-repeat center center/cover ;
+    //https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80
+    //https://www.teahub.io/photos/full/4-47684_mtg-wallpaper-high-definition-desktop-background-blue-and.jpg
+    //https://wallpaperaccess.com/full/3740791.jpg
+    //https://wallpaper.dog/large/377198.jpg
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    border: solid 2px white;
+    border-radius: 7px;
+    background-color: rgba(88, 72, 141, 0.3);
+    color: white;
+    font-family: 'Bigshot One', cursive;
+    // font-family: 'Poppins', sans-serif;
+    h1 {
+        flex-basis: 100%; 
+        font-size: 2.5rem;  
+        font-weight: 800;
+        letter-spacing: 0.1rem;
+        margin-top: 1.2rem;
+    }
+    h3 {
+        margin-top: 0.3rem;
+        font-size: 1.5rem;
+        font-weight: 100;
+        font-style: italic;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       
+    }
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+
+.form-error-message {
+    position: fixed;
+    translate: 0 60px;
+    flex-basis: 100%;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: rgb(207, 4, 4);
+}
+
+.form-input {
+    flex-basis: 60%;
+    font-size: 1.5rem;
+    margin-top: 0.6rem;
+    font-family: 'Bigshot One', cursive;
+    border-radius: 5px;
+    color: rgb(52, 6, 62);
+    &:focus {
+        outline: 2px solid rgb(81, 0, 231);
+    }
+}
+
+.form-avatar {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    div {
+        text-align: center;
+        flex-basis: 100%;
+        
+    }
+    img {
+        height: 150px;
+        border: 1px solid rgb(43, 0, 62);
+        transition: 0.5s ease-in-out;
+        margin: 0.1rem;
+        cursor: pointer;  
+    } 
+}
+
+.form-div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.username-header {
+    flex-basis: 100%;
+}
+
+.login_button {
+    translate: -4px 0;
+        width: 53%;
+        margin: 0.5rem auto 2rem auto;
+        background-color: #ffffff;
+        color: #080710;
+        padding: 10px 0px;
+        font-size: 20px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: 'Bigshot One', cursive;
+        font-weight: 100;
+}
+
+input[type="radio"] {
+    display:none;
+}
+
+.form-control {
+    flex-basis: 100%;
+}
+
+.login-avatars {
+    margin-top: 0.5rem;
+}
+  
+[type=radio]:checked + img {
+        outline: 1px solid rgb(121, 72, 171);
+        filter: grayscale(1);
+        transition: 1s;
+}
+
+.message-avatar img {
+    width: 2.5rem;
+    border-radius: 50%;
+    margin-left: 1.5rem;   
+}
+.member-list-avatar img {
+    width: 3.5rem;
+    border-radius: 50%;
+    border: 1px solid rgb(93, 32, 123);
+}
+
+@media (max-width: 1025px){
+    .form-wrapper{
+      width: 60%;
+     
+    }
+}
+@media (max-width: 570px){
+    .login-page {
+        height: 100%;
+    }
+    .form-wrapper{
+      width: 80%;
+      margin-top: 2rem;
+      margin-bottom: 4.6rem;
+     
+    }
+}
+@media (max-width: 380px){
+    .login-page {
+        height: 100%;
+    }
+    .form-wrapper{
+      width: 90%; 
+    }
+}
+@media (max-width: 325px){
+    .login-page {
+        height: 100%;
+    }
+    .form-input{
+       width: 200px;
+    }
+}
+@media (max-width: 227px){
+    .login-page {
+        height: 100%;
+    }
+    .login-avatars img{
+       width: 70%;
+       height: 180px;
+    }
+}
+
+.chat {
+    margin: auto;
+    translate: 0 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 13px;
+       
+}
+.chat-header { 
+    flex-basis: 100%;
+    height: 8vh;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    border-radius: 13px 13px 0 0;
+    position: relative;
+    //background-color: rgba(51, 12, 180, 0.8);
+    background-color: rgba(46, 23, 121, 0.7);
+}
+.chat-main {
+    flex-basis: 100%;
+    
+}
+.chat-footer {
+    flex-basis: 100%;
+    height: 10%;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.chat-header-button {
+    display: inline-block;
+    margin-top: 1.1rem;
+    position: absolute;
+    right: 3rem;   
+  
+}
+
+.chat-header-logout-button{
+    width: 130%; 
+        background-color: #ffffff;
+        color: #080710;
+        padding: 8px 9px;
+        font-size: 14px;
+        font-weight: 400;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: 'Bigshot One', cursive;
+        font-weight: 100;
+}
+
+.chat-header-greetings-msg {
+    display: inline-block;
+    margin-top: 1.3rem; 
+    color: white; 
+    font-family: 'Bigshot One', cursive;
+    font-size: 1.8rem;
+    font-weight: 100;
+}
+
+.chat-main-item {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    height: 80vh;
+}
+
+.chat-main-members {
+    flex-basis: 25%;
+    height: 100%;
+    border-right: 2px solid rgb(255, 255, 255);
+    border-radius: 0 0 0 13px;
+    background-color: rgba(51, 12, 180, 0.3);
+}
+
+.chat-main-messages {
+    flex-basis: 100%;
+    text-align: right;
+    padding-top: 2rem;
+    padding-right: 2rem;
+   
+}
+
+.flex-mess-wrapper {
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+    flex-basis: 75%;
+    background-color: rgba(146, 142, 158, 0.2);
+    
+}
+
+.chat-member-list-member-item {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+}
+.chat-member-list-member-username {
+    margin-left: 1rem;
+    color: white;    
+}
+.chat-member-list-item div:first-of-type {
+    font-family: 'Bigshot One', cursive;
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 100;
+    margin-top: 0.7rem;
+}
+.chat-footer{
+    height: 13%;
+}
+.footer-send-message-div {
+    font-family: 'Bigshot One', cursive;
+    font-size: 1.5rem;
+    color: white;
+}
+.message-form-input {
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    width: 80%;
+    border-radius: 5px 0 0 5px;
+}
+.footer-send-message-form{
+    margin-top: 0.7rem;
+}
+.message-form-button{
+    background-color: #ffffff;
+    color: #b00303;
+    padding: 9px 16px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-family: 'Bigshot One', cursive;
+    font-weight: 100;
+    translate: 0 -1px;
+}
+
+.my-message {
+    color: white;
+    background-color: #753699;
+    padding: 0.3rem 0.5rem;
+    border-radius: 10px;
+    display: inline-block;
+     word-wrap: break-word;
+    width: 100%;
+   
+}
+.others-message {
+    color: white;
+    background-color: rgb(68, 54, 188);
+    padding: 0.3rem 0.5rem;
+    margin-left: 1rem;
+    border-radius: 10px;
+    
+}
+.my-item {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.others-item {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.message-joined{
+    display: inline-block;
+    color: rgb(221, 199, 221);
+    background-color: #36997b;
+    padding: 0.3rem;
+    border-radius: 10px;
+    margin-top: 0.2rem;
+}
+.message_joined-left {
+    text-align: center;
+}
+.message-left {
+    display: inline-block;
+    color: rgb(221, 199, 221);
+    background-color: rgb(133, 25, 48);
+    padding: 0.3rem;
+    border-radius: 10px;
+    margin-top: 0.2rem;
+}
+.message_message-item {
+    display: inline-block;
+}
+
+@media (max-width: 1245px) {
+   .chat {
+    width: 80%;
+   }
+}
+@media (max-width: 935px) {
+    .chat {
+     width: 90%;
+    }
+ }
+ @media (max-width: 835px) {
+    .member-list-avatar {
+        width: 1rem;
+    }
+    .chat-member-list-member-username{
+        position: relative;
+        font-size: 1.2rem;
+        margin-left: 3rem;
+    }
+ }
+ @media (max-width: 760px) {
+    .chat-member-list-member-item{
+        flex-wrap: wrap;
+        text-align: center;
+        margin: 0;
+        margin-top: 1rem;
+    }
+   .chat-main-item {
+        flex-wrap: nowrap;
+   }
+    .member-list-avatar {
+        flex-basis: 100%;
+        margin: 0;
+    }
+    .chat-member-list-member-username{
+        flex-basis: 100%;
+        margin: 0;
+    }
+    .chat-member-list-item div:first-of-type {
+        font-size: 1.4rem;
+    }
+    .chat-footer {
+        padding-right: 0.3rem;
+    }
+    .message-form-input {
+        width: 70%;
+    }
+    .my-message {
+         word-wrap: break-word;
+         width: 85%;
+    }
+    .footer-send-message-form {
+        width: 95%;
+       }
+    
+ }
+ @media (max-width: 586px){
+    .chat-main {
+        overflow: hidden;
+    }
+    .flex-mess-wrapper {
+        width: 100%;  
+    }
+    .my-message {
+        width: 80%;
+    }
+ }
+ @media (max-width: 510px) {
+    .flex-mess-wrapper {
+        flex-basis: 100%;
+       }
+    .chat-header-greetings-msg{
+        font-size: 1.4rem;
+    }
+    .chat-header-item {
+        text-align: left;
+        margin-left: 2rem;
+    }
+    .chat-main-messages {
+        padding: 1rem 0.6rem 0 0;
+    }
+    .message-avatar img {
+        margin: 1rem 0.6rem 0 0.8rem ;
+    }
+    .my-message {
+        word-wrap: break-word;
+        width: 70%;
+   }
+   .chat-main-members {
+    display: none;
+   }
+ }
+@media (max-width: 400px) {
+    
+    .message_message-item {
+        text-align: center;
+    }
+    .message-avatar img {
+        margin: 0.2rem;
+    }
+    .others-item {
+        margin-left: 1rem;
+        margin-top: 0.5rem;
+    }
+    .my-item {
+        margin-right: 1rem;
+    }
+    .my-message {
+        margin: 0;
+    }
+}
+    
