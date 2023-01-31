@@ -1,11 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import ChatContext from "./context/ChatContext";
 import UserContext from "./context/UserContext";
 
 export default function ChatMessageList() {
   const { messageArray } = useContext(ChatContext);
   const { user } = useContext(UserContext);
+  const bottomRef = useRef();
 
+  useEffect(() => {
+    if (bottomRef.current) {
+      bottomRef.current.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+  }, [messageArray]);
+  
   function getWrapperClass(message) {
     return `${
       user.id === message.user.id ? "my-item" : "others-item"
@@ -51,6 +58,7 @@ export default function ChatMessageList() {
           );
         }
       })}
+      <div className="bottomContainerElement" ref={bottomRef}></div>
     </div>
   );
 }

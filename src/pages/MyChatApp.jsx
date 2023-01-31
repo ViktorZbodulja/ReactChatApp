@@ -26,7 +26,7 @@ export default function MyChatApp() {
     setDrone(null);
     setUser(null);
   }
-
+  
   return (
     <div>
       <UserContext.Provider value={{ user, drone, onUserLogin, userLogout }}>

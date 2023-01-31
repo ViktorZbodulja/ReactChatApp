@@ -15,6 +15,20 @@ export default function Chat() {
   const [membersArray, setMembersArray] = useState([]);
 
   useEffect(() => {
+    const storedMessageArray = JSON.parse(localStorage.getItem('messageArray'));
+    const storedMembersArray = JSON.parse(localStorage.getItem('membersArray'));
+    if (storedMessageArray && storedMembersArray) {
+        setMessageArray(storedMessageArray);
+        setMembersArray(storedMembersArray);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('messageArray', JSON.stringify(messageArray));
+    localStorage.setItem('membersArray', JSON.stringify(membersArray));
+  }, [messageArray, membersArray]);
+  
+  useEffect(() => {
     if (user) {
       setupRoom(drone);
     }

@@ -51,8 +51,6 @@
 }
 
 .form-error-message {
-  position: fixed;
-  translate: 0 60px;
   flex-basis: 100%;
   font-size: 1.2rem;
   margin-top: 1rem;
@@ -74,7 +72,7 @@
 .form-avatar {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 .form-avatar div {
   text-align: center;
@@ -196,7 +194,6 @@ input[type=radio] {
 
 .chat-header {
   flex-basis: 100%;
-  height: 8vh;
   border-bottom: 2px solid rgb(255, 255, 255);
   border-radius: 13px 13px 0 0;
   position: relative;
@@ -209,16 +206,31 @@ input[type=radio] {
 
 .chat-footer {
   flex-basis: 100%;
-  height: 10%;
+  height: 10vh;
   text-align: right;
   padding-right: 2rem;
 }
 
+.chat-header-item {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+
 .chat-header-button {
   display: inline-block;
-  margin-top: 1.1rem;
   position: absolute;
   right: 3rem;
+}
+
+.chat-header-greetings-msg {
+  display: inline-block;
+  flex-basis: 50%;
+  text-align: right;
+  color: white;
+  font-family: "Bigshot One", cursive;
+  font-size: 1.8rem;
+  font-weight: 100;
 }
 
 .chat-header-logout-button {
@@ -231,15 +243,6 @@ input[type=radio] {
   border-radius: 5px;
   cursor: pointer;
   font-family: "Bigshot One", cursive;
-  font-weight: 100;
-}
-
-.chat-header-greetings-msg {
-  display: inline-block;
-  margin-top: 1.3rem;
-  color: white;
-  font-family: "Bigshot One", cursive;
-  font-size: 1.8rem;
   font-weight: 100;
 }
 
@@ -260,9 +263,25 @@ input[type=radio] {
 
 .chat-main-messages {
   flex-basis: 100%;
+  height: 70vh;
   text-align: right;
   padding-top: 2rem;
   padding-right: 2rem;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 254, 254);
+  border-radius: 10px;
 }
 
 .flex-mess-wrapper {
@@ -335,7 +354,7 @@ input[type=radio] {
   padding: 0.3rem 0.5rem;
   border-radius: 10px;
   display: inline-block;
-  word-wrap: break-word;
+  word-break: break-all;
   width: 100%;
 }
 
@@ -385,6 +404,40 @@ input[type=radio] {
   display: inline-block;
 }
 
+@media (min-width: 1344px) {
+  .chat {
+    width: 50%;
+  }
+  .chat-main-messages {
+    padding-right: 1rem;
+  }
+  .message-avatar img {
+    margin-left: 1rem;
+  }
+  .message_joined-left {
+    margin-top: 0.4rem;
+  }
+  .others-message {
+    margin-top: 0.4rem;
+  }
+  .others-message {
+    word-break: break-all;
+  }
+}
+@media (max-width: 1575px) {
+  .chat {
+    width: 60%;
+  }
+  .others-message {
+    word-break: break-all;
+  }
+  .message_joined-left {
+    margin-top: 0.4rem;
+  }
+  .others-message {
+    margin-top: 0.4rem;
+  }
+}
 @media (max-width: 1245px) {
   .chat {
     width: 80%;
@@ -439,6 +492,9 @@ input[type=radio] {
   .footer-send-message-form {
     width: 95%;
   }
+  .footer-send-message-div {
+    margin-right: 20px;
+  }
 }
 @media (max-width: 586px) {
   .chat-main {
@@ -458,10 +514,6 @@ input[type=radio] {
   .chat-header-greetings-msg {
     font-size: 1.4rem;
   }
-  .chat-header-item {
-    text-align: left;
-    margin-left: 2rem;
-  }
   .chat-main-messages {
     padding: 1rem 0.6rem 0 0;
   }
@@ -477,8 +529,20 @@ input[type=radio] {
   }
 }
 @media (max-width: 400px) {
+  .chat-header {
+    height: 10vh;
+  }
   .message_message-item {
     text-align: center;
+  }
+  .footer-send-message-form {
+    margin-top: 0;
+  }
+  .footer-send-message-item {
+    margin-top: 0.5rem;
+  }
+  .chat-header-logout-button {
+    translate: 15% 0;
   }
   .message-avatar img {
     margin: 0.2rem;
@@ -492,5 +556,8 @@ input[type=radio] {
   }
   .my-message {
     margin: 0;
+  }
+  .chat-header-greetings-msg {
+    text-align: center;
   }
 }/*# sourceMappingURL=style.css.map */
