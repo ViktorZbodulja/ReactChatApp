@@ -348,9 +348,8 @@ input[type="radio"] {
     padding: 0.3rem 0.5rem;
     border-radius: 10px;
     display: inline-block;
-    word-break: break-all;
-    width: 100%;
-   
+    word-break: break-all; 
+    margin-left: 2rem;
 }
 .others-message {
     color: white;
@@ -358,7 +357,7 @@ input[type="radio"] {
     padding: 0.3rem 0.5rem;
     margin-left: 1rem;
     border-radius: 10px;
-    
+    margin-right: 1rem;   
 }
 .my-item {
     display: flex;
@@ -476,7 +475,6 @@ input[type="radio"] {
     }
     .my-message {
          word-wrap: break-word;
-         width: 85%;
     }
     .footer-send-message-form {
         width: 95%;
@@ -491,9 +489,6 @@ input[type="radio"] {
     }
     .flex-mess-wrapper {
         width: 100%;  
-    }
-    .my-message {
-        width: 80%;
     }
  }
  @media (max-width: 510px) {
@@ -511,7 +506,6 @@ input[type="radio"] {
     }
     .my-message {
         word-wrap: break-word;
-        width: 70%;
    }
    .chat-main-members {
     display: none;
@@ -542,9 +536,6 @@ input[type="radio"] {
     }
     .my-item {
         margin-right: 1rem;
-    }
-    .my-message {
-        margin: 0;
     }
     .chat-header-greetings-msg {
         text-align: center;
