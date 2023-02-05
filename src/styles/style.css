@@ -4,12 +4,12 @@
 }
 
 .App {
-  background: url("https://wallpaper.dog/large/377198.jpg") no-repeat center center/cover;
+  background: url("../images/background-picture.jpg") no-repeat center center/cover;
   height: 100vh;
 }
 
 .login-page {
-  background: url("https://wallpaper.dog/large/377198.jpg") no-repeat center center/cover;
+  background: url("../images/background-picture.jpg") no-repeat center center/cover;
   height: 100vh;
   display: flex;
   justify-content: center;
